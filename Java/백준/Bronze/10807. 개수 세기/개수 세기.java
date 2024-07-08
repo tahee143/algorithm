@@ -9,26 +9,20 @@ public class Main {
 
         int n = Integer.parseInt(st.nextToken());
         int[] arr = new int[n];
-        int count = 0;
-
         st = new StringTokenizer(br.readLine());
+        int x = Integer.parseInt(br.readLine());
+        int count = 0;
 
         for(int i = 0; i < n; i++){
             arr[i] = Integer.parseInt(st.nextToken());
-        }
-
-        st = new StringTokenizer(br.readLine());
-        int x = Integer.parseInt(st.nextToken());
-        
-        for(int i = 0; i < n; i++){
             if(arr[i] == x) {
                 count++;
             }
         }
-        
+
         bw.append(String.valueOf(count));
-        
+
         br.close();
-        bw.close();
+        bw.flush();
     }
 }
