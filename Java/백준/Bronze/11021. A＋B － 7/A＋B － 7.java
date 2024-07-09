@@ -9,11 +9,11 @@ public class Main {
 
         int t = Integer.parseInt(br.readLine());
 
-        for(int i = 0; i < t; i++){
+        for(int i = 1; i <= t; i++){
             st = new StringTokenizer(br.readLine(), " ");
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
-            bw.append("Case #" + String.valueOf(i+1) + ": ").append(String.valueOf(a + b)).append("\n");
+            bw.append("Case #" + String.valueOf(i) + ": ").append(String.valueOf(a + b)).append("\n");
         }
 
         bw.flush();
