@@ -9,16 +9,13 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         br.close();
 
-        int[] arr = new int[n];
+        int max = -1000000;
+        int min = 1000000;
 
         for(int i = 0; i < n; i++){
-            arr[i] = Integer.parseInt(st.nextToken());
-        }
-
-        int max = arr[0], min = arr[0];
-        for(int i = 0; i < n; i++){
-            if(min > arr[i]) min = arr[i];
-            if(max < arr[i]) max = arr[i];
+            int num = Integer.parseInt(st.nextToken());
+            if(min > num) min = num;
+            if(max < num) max = num;
         }
 
         bw.append(String.valueOf(min)).append(" ").append(String.valueOf(max));
