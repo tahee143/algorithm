@@ -11,23 +11,18 @@ public class Main {
 
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
-        double[] arr = new double[n];
-        double max = 0;
+        int[] arr = new int[n];
+        int max = 0;
+        double sum = 0;
         for(int i = 0; i < n; i++){
-            double num = Double.parseDouble(st.nextToken());
+            int num = Integer.parseInt(st.nextToken());
             arr[i] = num;
-            if(max < num) max = num;
+            sum += num;
+            max = Math.max(max, num);
         }
-
         br.close();
 
-        double avg = 0;
-        for(double num : arr){
-            avg += ((num/max)*100);
-        }
-
-        avg /= n;
-
+        double avg = (sum / max * 100 / n);
         StringBuilder sb = new StringBuilder();
         sb.append(avg);
         System.out.println(sb);
