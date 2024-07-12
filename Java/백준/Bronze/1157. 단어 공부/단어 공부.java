@@ -17,18 +17,18 @@ public class Main {
         }
 
         int max = -1;
-        char result = '?';
+        int result = -2; // ? 아스키코드 -2
         for(int i = 0; i < 26; i++){
             if(c[i] > max) {
                 max = c[i];
-                result = (char) (i + 65);
+                result = i;
             } else if (c[i] == max) {
-                result = '?';
+                result = -2;
             }
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append(result);
+        sb.append((char)(result + 65));
         System.out.println(sb);
     }
 }
